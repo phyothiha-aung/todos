@@ -1,13 +1,17 @@
 import React from "react";
 
-const SearchBox = () => {
+const SearchBox = ({ query, setQuery }) => {
   return (
-    <input
-      className="w-full outline-none p-3 text-lg"
-      type="search"
-      name="search"
-      placeholder="Search"
-    />
+    <div className="w-full px-3">
+      <input
+        className="w-full outline-none p-3 text-lg"
+        type="search"
+        name="search"
+        placeholder="Search"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
+    </div>
   );
 };
 

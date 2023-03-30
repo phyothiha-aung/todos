@@ -26,8 +26,14 @@ const reducer = (state = initialState, action) => {
     }
     case MARK_COMPLETED: {
       const newState = state.map((td) => {
-        if (td.id === action.payload) td.completed = !td.completed;
-        return td;
+        if (td.id === action.payload) {
+          return {
+            ...td,
+            completed: !td.completed,
+          };
+        } else {
+          return td;
+        }
       });
       return newState;
     }
