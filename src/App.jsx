@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="flex justify-center items-center w-full h-screen ">
       {modal && <ModalBox setModal={setModal} />}
-      <div className="bg-gray-300 max-w-[700px] min-w-[300px] w-full">
+      <div className="bg-gray-300 max-w-[700px] min-w-[300px] w-full rounded-lg overflow-hidden">
         <h1 className="text-3xl text-black text-center font-bold my-4">
           Todo List
         </h1>
